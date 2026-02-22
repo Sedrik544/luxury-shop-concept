@@ -3,7 +3,8 @@ const products = [
         id: 1, 
         name: "Noir Classic", 
         price: 3500, 
-        img: "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=800&q=80" 
+        // Tento nový odkaz je přímý a stabilní:
+        img: "https://images.pexels.com/photos/1961795/pexels-photo-1961795.jpeg?auto=compress&cs=tinysrgb&w=800" 
     },
     { 
         id: 2, 
