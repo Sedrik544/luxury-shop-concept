@@ -19,7 +19,6 @@ const products = [
         img: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800&q=80" 
     }
 ];
-
 let cart = [];
 
 const productGrid = document.getElementById('product-grid');
