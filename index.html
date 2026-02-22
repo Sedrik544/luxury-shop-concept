@@ -3,64 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Aura Boutique | E-shop Concept</title>
+    <title>L'Aura Boutique | Men's Collection</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Inter:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
-<body class="bg-[#faf9f6] text-[#1a1a1a]">
+<body class="bg-[#faf9f6] text-[#1a1a1a] antialiased">
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-black/5 px-8 py-4 flex justify-between items-center">
-        <div class="text-2xl tracking-[0.3em] font-light">L'AURA</div>
-        <div class="relative cursor-pointer" id="cart-icon">
-            <span class="text-sm uppercase tracking-widest mr-2">Košík</span>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-black/5 px-8 py-4 flex justify-between items-center">
+        <div class="text-2xl tracking-[0.3em] font-light uppercase">L'AURA</div>
+        <div class="relative cursor-pointer flex items-center" id="cart-icon">
+            <span class="text-[10px] uppercase tracking-widest mr-2">Košík</span>
             <span id="cart-count" class="bg-black text-white text-[10px] px-2 py-0.5 rounded-full">0</span>
         </div>
-        <header class="pt-32 pb-20 text-center">
-    <h1 class="text-6xl md:text-8xl font-serif italic mb-6">The Gentleman’s Collection</h1>
-    <p class="uppercase tracking-[0.5em] text-sm opacity-50">Limitovaná edice pro rok 2026</p>
-</header>
     </nav>
-        <div class="product-card">
-            <div class="img-container mb-6">
-                <img src="${p.img}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/600x800?text=Image+Loading...'">
-                <button onclick="addToCart(${p.id})" class="absolute bottom-0 left-0 w-full bg-black/90 text-white py-4 opacity-0 hover:opacity-100 transition-opacity uppercase text-[10px] tracking-[0.2em]">Přidat do košíku</button>
-            </div>
-            <h3 class="text-xl italic mb-2">${p.name}</h3>
-            <p class="opacity-60 text-sm font-light">${p.price.toLocaleString()} Kč</p>
-        </div>
 
-            <div class="flex justify-between items-center border-b border-black/5 pb-4">
-                <div class="flex items-center gap-4">
-                    <img src="${item.img}" class="w-12 h-16 object-cover">
-                    <div>
-                        <p class="text-sm italic">${item.name}</p>
-                        <p class="text-[10px] opacity-50">${item.price.toLocaleString()} Kč</p>
-                    </div>
-                </div>
-                <button onclick="removeFromCart(${index})" class="text-[10px] uppercase opacity-40 hover:opacity-100">Odstranit</button>
-            </div>
+    <header class="pt-40 pb-20 text-center">
+        <h1 class="text-6xl md:text-8xl font-serif italic mb-6">The Gentleman's Collection</h1>
+        <p class="uppercase tracking-[0.5em] text-[10px] opacity-50">Limitovaná edice 2026</p>
+    </header>
 
-    <main class="max-w-7xl mx-auto px-8 grid md:grid-cols-3 gap-16" id="product-grid">
+    <main class="max-w-7xl mx-auto px-8 grid md:grid-cols-3 gap-12" id="product-grid">
         </main>
 
-    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-full md:w-96 bg-white z-[60] shadow-2xl translate-x-full transition-transform duration-500 p-8 flex flex-col">
-        <div class="flex justify-between items-center mb-12">
-            <h2 class="text-2xl font-serif italic">Váš výběr</h2>
-            <button id="close-cart" class="text-sm uppercase tracking-widest">Zavřít</button>
+    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-full md:w-[400px] bg-white z-[100] shadow-2xl translate-x-full transition-transform duration-500 ease-in-out p-10 flex flex-col">
+        <div class="flex justify-between items-center mb-10">
+            <h2 class="text-3xl font-serif italic">Váš výběr</h2>
+            <button id="close-cart" class="text-[10px] uppercase tracking-widest opacity-40 hover:opacity-100">Zavřít</button>
         </div>
-        <div id="cart-items" class="flex-grow overflow-y-auto space-y-6">
-            </div>
-        <div class="border-t border-black/10 pt-6 mt-6">
-            <div class="flex justify-between mb-4 text-xl">
+        <div id="cart-items" class="flex-grow overflow-y-auto space-y-6 scrollbar-hide"></div>
+        <div class="border-t border-black/5 pt-8 mt-6">
+            <div class="flex justify-between mb-6 text-xl font-light">
                 <span>Celkem</span>
                 <span id="cart-total">0 Kč</span>
             </div>
-            <button class="w-full bg-black text-white py-4 uppercase tracking-[0.2em] text-xs hover:bg-stone-800 transition">K pokladně</button>
+            <button class="w-full bg-black text-white py-5 uppercase tracking-[0.3em] text-[10px] hover:bg-neutral-800">K pokladně</button>
         </div>
     </div>
 
-    <div id="overlay" class="fixed inset-0 bg-black/20 z-[55] hidden opacity-0 transition-opacity"></div>
+    <div id="overlay" class="fixed inset-0 bg-black/30 z-[90] hidden transition-opacity duration-500"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
