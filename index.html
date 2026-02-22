@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Aura Boutique | E-shop Concept</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-[#faf9f6] text-[#1a1a1a]">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-black/5 px-8 py-4 flex justify-between items-center">
+        <div class="text-2xl tracking-[0.3em] font-light">L'AURA</div>
+        <div class="relative cursor-pointer" id="cart-icon">
+            <span class="text-sm uppercase tracking-widest mr-2">Košík</span>
+            <span id="cart-count" class="bg-black text-white text-[10px] px-2 py-0.5 rounded-full">0</span>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-20 text-center">
+        <h1 class="text-6xl md:text-8xl font-serif italic mb-6">The Essence Collection</h1>
+        <p class="uppercase tracking-[0.5em] text-sm opacity-50">Limitovaná edice pro rok 2026</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-8 grid md:grid-cols-3 gap-16" id="product-grid">
+        </main>
+
+    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-full md:w-96 bg-white z-[60] shadow-2xl translate-x-full transition-transform duration-500 p-8 flex flex-col">
+        <div class="flex justify-between items-center mb-12">
+            <h2 class="text-2xl font-serif italic">Váš výběr</h2>
+            <button id="close-cart" class="text-sm uppercase tracking-widest">Zavřít</button>
+        </div>
+        <div id="cart-items" class="flex-grow overflow-y-auto space-y-6">
+            </div>
+        <div class="border-t border-black/10 pt-6 mt-6">
+            <div class="flex justify-between mb-4 text-xl">
+                <span>Celkem</span>
+                <span id="cart-total">0 Kč</span>
+            </div>
+            <button class="w-full bg-black text-white py-4 uppercase tracking-[0.2em] text-xs hover:bg-stone-800 transition">K pokladně</button>
+        </div>
+    </div>
+
+    <div id="overlay" class="fixed inset-0 bg-black/20 z-[55] hidden opacity-0 transition-opacity"></div>
+</body>
+</html>
