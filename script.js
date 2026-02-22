@@ -1,24 +1,35 @@
 const products = [
-    // Najdi v script.js tuto část a přepiš ji:
-{ 
-    id: 1, 
-    name: "Noir Distillé", 
-    price: 3200, 
-    img: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600" 
-}
-    { id: 2, name: "Santal Blanc", price: 2850, img: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600" },
-    { id: 3, name: "Ambre Lumière", price: 4100, img: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=600" }
+    { 
+        id: 1, 
+        name: "Gentleman's Accord", 
+        price: 3500, 
+        img: "https://images.unsplash.com/photo-1550531108-96443834827c?auto=format&fit=crop&q=80&w=800" 
+    },
+    { 
+        id: 2, 
+        name: "Urban Explorer", 
+        price: 2900, 
+        img: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=800" 
+    },
+    { 
+        id: 3, 
+        name: "Midnight Suede", 
+        price: 4200, 
+        img: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=800" 
+    }
 ];
 
 let cart = [];
 
 // 1. Vygenerovat produkty
 const productGrid = document.getElementById('product-grid');
+productGrid.innerHTML = ''; // Vyčistit staré produkty
+
 products.forEach(p => {
     productGrid.innerHTML += `
         <div class="product-card">
             <div class="img-container mb-6">
-                <img src="${p.img}" alt="${p.name}">
+                <img src="${p.img}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/600x800?text=Image+Loading...'">
                 <button onclick="addToCart(${p.id})" class="absolute bottom-0 left-0 w-full bg-black/90 text-white py-4 opacity-0 hover:opacity-100 transition-opacity uppercase text-[10px] tracking-[0.2em]">Přidat do košíku</button>
             </div>
             <h3 class="text-xl italic mb-2">${p.name}</h3>
