@@ -1,5 +1,11 @@
 const products = [
-    { id: 1, name: "Noir Distillé", price: 3200, img: "https://images.unsplash.com/photo-1543473211-12712ad75f5e?q=80&w=600" },
+    // Najdi v script.js tuto část a přepiš ji:
+{ 
+    id: 1, 
+    name: "Noir Distillé", 
+    price: 3200, 
+    img: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600" 
+}
     { id: 2, name: "Santal Blanc", price: 2850, img: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600" },
     { id: 3, name: "Ambre Lumière", price: 4100, img: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=600" }
 ];
